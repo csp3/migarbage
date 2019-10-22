@@ -1,4 +1,5 @@
-/*Nombre de archivo: mld.h 
+/*
+Nombre de archivo: mld.h 
 Descripción:  Este fichero define las estructuras de datos utilizadas para la herramienta MLD
 Versión: 1.0 
 Creado:  Jueves 28 de febrero de 2019 05:14:18 IST
@@ -6,9 +7,7 @@ Revisión: 1.0
 Compilador: gcc
  
 Autor:  Er. Abhishek Sagar, Desarrollador de redes (AS), sachinites@gmail.com
-Compañía:  Brocade Communications(Jul 2012- Mar 2016), Actual : Juniper Networks(Abr 2017 - Presente)
 
-Copyright (c) 2017 Abhishek Sagar.
 Este programa es software libre: puede redistribuirlo y/o modificarlo. 
 */
 
@@ -60,8 +59,8 @@ struct _struct_db_rec_
 	struct_db_rec_t *next; /*puntero a la siguiente estructura de la lista enlazada*/
 	char struct_name[MAX_STRUCTURE_NAME_SIZE]; //key
 	unsigned int ds_size; /*tamaño de la estructura*/
-	unsigned int n_fields: /*numero de campos*/
-	field_info_t *field_info_t; /*puntero al array de campos de esa estructura*/
+	unsigned int n_fields; /*numero de campos*/
+	field_info_t *fields; /*puntero al array de campos de esa estructura*/
 };
 
 /*la cabecera de la lista enlazada que representa la base de datos de la estructura*/
